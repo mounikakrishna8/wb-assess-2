@@ -8,7 +8,23 @@
 // update and say "Log out". If a user clicks on the button again, its text
 // should switch from "Log Out" to "Log In".
 
+
 /// TODO: replace this with your code
+let counter = 1;
+const button = document.querySelector('#auth');
+    button.addEventListener("click", () => {
+   console.log(counter);
+    
+    if(counter % 2 !== 0){
+        button.innerHTML = "Log Out";  
+    } else {
+        button.innerHTML = "Log in";
+    }
+    counter++;
+    
+  
+});
+
 
 // Send an alert
 //
@@ -19,6 +35,11 @@
 
 /// TODO: replace this with your code
 
+ const submitButton = document.querySelector('#submit-button');
+ submitButton.addEventListener("click", () => {
+     const text = document.querySelector('#alert-message');
+     window.alert(text.value);
+ });
 // Add an item
 //
 // This is a pretty silly feature -- when a user clicks on the
@@ -35,6 +56,17 @@
 //   </ol>
 
 /// TODO: replace this with your code
+//let addItem = 1;
+const doubleClickButton = document.querySelector('#item-adder');
+doubleClickButton.addEventListener("dblclick", () => {
+    console.log('hello');
+    let item = document.querySelector('#list'); 
+    console.log(item);
+    const listNode = document.createElement('li');
+    listNode.innerText = "Item";
+    item.appendChild(listNode);
+});
+
 
 // Change colors
 //
@@ -46,6 +78,7 @@
 // Stuff Blue" should make text blue.
 
 /// TODO: replace this with your code
+
 
 // Calculate factorial
 //

@@ -31,6 +31,19 @@
 // Ex.:
 //   buildWordChain(['zoo', 'sour', 'racket', 'octos']);
 //   => ['zoo', 'octos', 'sour', 'racket']
-function buildWordChain(words) {}
+function buildWordChain(words) {
+    const wordChain = [];
+    wordChain.push(words[0]);
+    words.forEach((word) => {
+        
+        
+        if(wordChain[0] !== word){
+            
+           
+        } else if ( word[word.length-1] === word[0]){
+            
+        }
+    })
+}
 
 export { buildWordChain };
