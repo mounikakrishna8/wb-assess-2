@@ -12,17 +12,17 @@
 /// TODO: replace this with your code
 let counter = 1;
 const button = document.querySelector('#auth');
-    button.addEventListener("click", () => {
-   console.log(counter);
-    
-    if(counter % 2 !== 0){
-        button.innerHTML = "Log Out";  
+button.addEventListener("click", () => {
+    console.log(counter);
+
+    if (counter % 2 !== 0) {
+        button.innerHTML = "Log Out";
     } else {
         button.innerHTML = "Log in";
     }
     counter++;
-    
-  
+
+
 });
 
 
@@ -35,11 +35,12 @@ const button = document.querySelector('#auth');
 
 /// TODO: replace this with your code
 
- const submitButton = document.querySelector('#submit-button');
- submitButton.addEventListener("click", () => {
-     const text = document.querySelector('#alert-message');
-     window.alert(text.value);
- });
+const submitButton = document.querySelector('#submit-button');
+submitButton.addEventListener("click", () => {
+    const text = document.querySelector('#alert-message');
+    window.alert(text.value);
+});
+
 // Add an item
 //
 // This is a pretty silly feature -- when a user clicks on the
@@ -56,11 +57,11 @@ const button = document.querySelector('#auth');
 //   </ol>
 
 /// TODO: replace this with your code
-//let addItem = 1;
+let addItem = 1;
 const doubleClickButton = document.querySelector('#item-adder');
 doubleClickButton.addEventListener("dblclick", () => {
     console.log('hello');
-    let item = document.querySelector('#list'); 
+    let item = document.querySelector('#list');
     console.log(item);
     const listNode = document.createElement('li');
     listNode.innerText = "Item";
@@ -78,6 +79,14 @@ doubleClickButton.addEventListener("dblclick", () => {
 // Stuff Blue" should make text blue.
 
 /// TODO: replace this with your code
+const changeColorB = document.querySelector('#blue');
+changeColorB.addEventListener('click', () => {
+    document.getElementById('color-changer').style.background = 'blue';
+});
+const changeColorR = document.querySelector('#red');
+changeColorR.addEventListener('click', () => {
+    document.getElementById('color-changer').style.background = 'red';
+});
 
 
 // Calculate factorial
@@ -96,6 +105,25 @@ doubleClickButton.addEventListener("dblclick", () => {
 //   - puts the result of the function inside the "result" span
 
 /// TODO: replace this with your code
+const factorialCal = document.querySelector('#submit-factorial');
+
+ factorialCal.addEventListener("click", () => {
+     console.log(factorialCal);
+    const number = document.querySelector('#factorial-input');
+    console.log(number);
+    
+    const res = document.querySelector('#result');
+
+    let fact = number.value;
+    let result = 1;
+    for(let i = i; i <= fact ; i++){
+      console.log(result = result * i)  ;
+    }
+    resultElement.innerText = result;
+
+    res.appendChild(resultElement);
+    window.alert(result);
+});
 
 // Validate a form
 //
@@ -113,3 +141,12 @@ doubleClickButton.addEventListener("dblclick", () => {
 // change the color of the text to red..
 
 /// TODO: replace this with your code
+const validations = document.querySelector('#validations');
+validations.addEventListener("click", () => {
+    if(validations.innerText[length] <= 4){
+        validations.innerText="the word must be atlest 4 characters long.";
+    }else{
+        validations.innerText= "Thanks for your Submission!"
+    }
+});
+

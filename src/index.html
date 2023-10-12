@@ -8,24 +8,25 @@
   </head>
 
   <body>
-    <div class = "">
-      <form>
-       <label> Character Name: </label> <input type = "text"/> <br> <br>
-       <label> Jedi </label> <input type = "radio"/> <label> Sith </label> <input type = "radio"/> <br> <br>
-       <label> Lightsaber color: </label>
-       <select> 
+    <div class = "form-types">
+      <form type = "submit">
+       <label> Character Name: </label> <input type = "text" class=" input"/> <br> <br>
+      <input type = "radio" name = "person" value = "jedi"  />  Jedi
+      <input type = "radio" name = "person" value = "sith" /> Sith <br> <br>
+       <label for = "colors"> Lightsaber color: </label>
+       <select name= "colors" id = "select-options" >  
          <option> Blue </option>
          <option> Green </option>
          <option> Red </option>
          <option>Purple </option>
       </select> <br> <br>
-       <button> Submit </button>
+       <button class="buttonSubmit"> Submit </button>
       </form>
     </div>
     
     <div>
-      <table border = "1">
-        <thead>
+      <table  border="1" class = "tbltxt">
+        <thead class="tblcoloumn">
           <tr>
             <td> Planet </td>
             <td> EnvironMent </td>
